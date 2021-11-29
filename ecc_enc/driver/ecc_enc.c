@@ -145,7 +145,7 @@ void ecc_encrypt(u32* C1x, u32* C1y, u32* C2x, u32* C2y)
 	XEcc_enc_C2x_v o_C2x;
 	XEcc_enc_C2y_v o_C2y;
 
-	int enc_finish;
+	int enc_finish = 0;
 
 	xil_printf("Start Encrypting \n\r");
 	XEcc_enc_Start(&ecc_enc);
