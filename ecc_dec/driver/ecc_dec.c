@@ -1,6 +1,6 @@
 // ecc_dec.c
 // @ ZCU102
-// Last Modified: 2021/11/26
+// Last Modified: 2021/11/29
 
 #include <stdlib.h>
 #include <stdio.h>
