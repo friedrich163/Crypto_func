@@ -41,7 +41,7 @@ void aes(
 			aescbc(RESET,   i_data, o_data);
 			aescbc(DECRYPT, i_data, o_data);
 			aescbc(DECRYPT, &i_data[16], &o_data[16]);
-		}
+		} 
 
 	}
 
@@ -70,7 +70,7 @@ int main() {
 		o_plaintext[i] = 0;
 	}
 
-	int mode;
+	int mode = 0;
 	// Test our engine
 
 	printf("origin plaintext: \n\r");
@@ -80,7 +80,7 @@ int main() {
 	printf("\n\n\r");
 	
 	printf("Encryption\n\n\r");
-	mode = 0;
+	mode = 1;
 	aes(mode, plaintext, iv, key, ciphertext);
 
 	printf("ciphertext: \n\r");
@@ -91,7 +91,7 @@ int main() {
 	printf("\n\n\r");
 	
 	printf("Decryption\n\n\r");
-	mode = 1;
+	mode = 0;
 	aes(mode, ciphertext, iv, key, o_plaintext);
 
 	printf("output plaintext: \n\r");
